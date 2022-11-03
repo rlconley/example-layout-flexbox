@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  border: 3px solid green;
+  display: flex;
+  /* need this on the parent container in order to be able to use any of the flexbox properties */
+  flex-wrap: wrap;
+  /* makes children wrap */
+}
+
+section {
+  /* selects all elements with the section tag regardless of class or id */
+  border: 3px solid purple;
+  min-height: 100%;
+  width: 49%;
+  /* supercedes the dimensions of the image and makes each section half of the parent */
+
+  /* flex-grow: 1; */
+  /* uses up all available space and makes the boxes equally proportioned */
+  display: flex;
+  /* allows us to use flex properties on the child elements of section */
+  flex-direction: column;
+  /* overrides the default side by side display of children in a flexbox */
+  align-content: center;
+  /* centers titles and flags within section */
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.level {
+  display: flex;
+  border: 2px solid orange;
+  justify-content: center;
+}
+
+.level .competition {
+  border: 2px solid palevioletred;
+  padding: 2%;
+  margin: 2%;
+}
